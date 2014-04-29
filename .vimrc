@@ -31,6 +31,9 @@ set hlsearch
 set cursorline
 set cursorcolumn
 
+" コマンドラインの行数
+set cmdheight=2
+
 " swapファイル作らない
 set noswapfile
 
@@ -67,6 +70,7 @@ NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'Shougo/unite.vim'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'osyo-manga/vim-over'
 NeoBundle 'LeafCage/yankround.vim'
@@ -77,6 +81,10 @@ NeoBundle 'kana/vim-textobj-user'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'vim-scripts/matchit.zip'
 NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'tyru/open-browser.vim'
+NeoBundle 'mattn/webapi-vim'
+NeoBundle 'mattn/startmenu-vim'
+NeoBundle 'mattn/excelview-vim'
 
 " colorscheme
 NeoBundle 'tomasr/molokai'
@@ -174,5 +182,14 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#3c3c3c ctermbg=darkgr
 " 大文字と小文字区別しない
 let b:match_ignorecase=1
 let b:match_words="(:),{:},[:]"
+
+" =================================================
+" open-browser
+" =================================================
+let g:netrw_nogx=1
+nmap gx <Plug>(openbrowser-smart-search)
+vmap gx <Plug>(openbrowser-smart-search)
+
+
 
 
